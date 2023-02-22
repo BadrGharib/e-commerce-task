@@ -1,0 +1,15 @@
+@import '../../../styles/common.scss';
+.search {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+.input {
+  height: 30px;
+  border: 0;
+  background-color: $secondery2;
+}

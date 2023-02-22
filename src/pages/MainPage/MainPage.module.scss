@@ -1,0 +1,8 @@
+@import '../../styles/common.scss';
+.main {
+  display: flex;
+  flex-direction: column;
+  .container {
+    margin-top: 100px;
+  }
+}

@@ -1,0 +1,15 @@
+$primary: #0c0eb7;
+$secondery: #035ea3;
+$secondery2: #f8f2f2;
+$secondery3: #e4dfdf;
+$light: #f9f7f7;
+$dark: black;
+
+@mixin hoverEfect {
+  background-color: $secondery2 !important;
+  color: $dark;
+  transition: 0.5s ease;
+}
+* {
+  box-sizing: border-box;
+}

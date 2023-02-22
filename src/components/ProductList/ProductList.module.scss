@@ -1,0 +1,23 @@
+@import '../../styles/common.scss';
+.productList {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.item {
+  width: 80%;
+  margin: 5px;
+}
+//for tablets and meduim devicese
+@media only screen and (min-width: 600px) {
+  .item {
+    width: 40%;
+  }
+}
+
+//for desktops
+@media only screen and (min-width: 768px) {
+  .item {
+    width: 30%;
+  }
+}

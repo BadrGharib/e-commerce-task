@@ -1,0 +1,49 @@
+@import '../../styles/common.scss';
+.productInfo {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  flex-direction: column;
+  .title {
+    color: $dark;
+    margin: 10px;
+    font-size: large;
+    font-weight: bold;
+  }
+  .priceOldPrice {
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    .price {
+      background-color: $primary;
+      color: $light;
+      width: 30%;
+      margin-right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25px;
+    }
+    .oldPrice {
+      text-decoration: line-through;
+      width: 30%;
+    }
+  }
+  .addNumberToCart {
+    margin: 10px;
+    display: flex;
+  }
+  .description {
+    margin: 10px;
+  }
+  .category {
+    color: $primary;
+    margin: 10px;
+  }
+  .itemCount {
+    height: 100%;
+    width: 50px;
+    margin-right: 5px;
+  }
+}

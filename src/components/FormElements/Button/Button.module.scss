@@ -1,0 +1,31 @@
+@import '../../../styles/common.scss';
+
+@mixin btnBase {
+  min-width: 100px;
+  height: 30px;
+  border: 1px solid $secondery;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $light;
+  font-weight: bolder;
+  background: $primary;
+}
+.button {
+  @include btnBase;
+  &:hover {
+    @include hoverEfect;
+    border: 1px solid $secondery;
+  }
+}
+.buttonRevers {
+  @include btnBase;
+  border: 1px solid $dark;
+  color: $dark;
+  font-weight: bolder;
+  background: $light;
+  &:hover {
+    @include hoverEfect;
+  }
+}
