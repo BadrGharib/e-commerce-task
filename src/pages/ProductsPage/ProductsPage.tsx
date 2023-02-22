@@ -35,7 +35,7 @@ const ProductsPage: React.FC = () => {
         <div className={style.search}>
           <Search
             onChange={onSearchChanged}
-            placeholder="Search For Aproduct"
+            placeholder="Search For A Product"
           />
         </div>
         <Range from={80} to={250} min={0} max={300} onChange={onRangeChanged} />
