@@ -1,0 +1,71 @@
+@import '../../styles/common.scss';
+.CartItems {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  .rowHeader {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $secondery;
+    border-bottom: 1px solid $secondery1;
+    height: 100px;
+    align-items: center;
+  }
+  .rowItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $secondery;
+    border-bottom: 1px solid $secondery1;
+    margin-top: 10px;
+  }
+  .img {
+    height: 200px;
+  }
+  .title {
+    width: 150px;
+  }
+  .cell {
+    display: flex;
+    width: 100%;
+  }
+  .itemCount {
+    width: 40px;
+  }
+  .close {
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .quantity {
+    width: 100px;
+  }
+  .imgCell {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//for desktops
+@media only screen and (min-width: 768px) {
+  .CartItems {
+    .rowHeader {
+      display: flex;
+    }
+    .rowItem {
+      flex-direction: row;
+    }
+    .title {
+      display: none;
+    }
+    .cell {
+      width: 100px;
+    }
+    .img {
+      height: 100px;
+    }
+  }
+}

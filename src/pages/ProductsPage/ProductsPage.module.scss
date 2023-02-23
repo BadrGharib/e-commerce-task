@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 .filters {
+  width: 30%;
+  display: none;
+}
+.filtersMobile {
   width: 90%;
 }
 .products {
@@ -21,7 +25,10 @@
     flex-direction: row;
   }
   .filters {
-    width: 30%;
+    display: block;
+  }
+  .filtersMobile {
+    display: none;
   }
   .products {
     width: 70%;

@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import style from './App.module.scss'
-import Navigation from './components/Navigation/Navigation'
 import Spinner from './components/UIElements/Spinner/Spinner'
 import MainPage from './pages/MainPage/MainPage'
 const ProductsPage = React.lazy(

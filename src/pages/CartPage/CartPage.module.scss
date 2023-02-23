@@ -5,37 +5,4 @@
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
-  .rowHeader {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: $secondery2;
-    border-bottom: 1px solid $secondery3;
-    height: 100px;
-    align-items: center;
-  }
-  .rowItem {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: $secondery2;
-    border-bottom: 1px solid $secondery3;
-  }
-  .img {
-    height: 100px;
-  }
-  .title {
-    width: 150px;
-  }
-  .cell {
-    width: 100px;
-  }
-  .itemCount {
-    width: 40px;
-  }
-  .close {
-    margin-left: 10px;
-    cursor: pointer;
-  }
 }

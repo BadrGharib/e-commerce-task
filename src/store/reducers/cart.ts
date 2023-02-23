@@ -15,8 +15,6 @@ const intialState: { cart: { [key: string]: Cart } } = {
 export default function cart(state = intialState, action: CartActions) {
   switch (action.type) {
     case ADD_TO_CART:
-      // eslint-disable-next-line no-debugger
-      debugger
       // eslint-disable-next-line no-case-declarations
       const id = uuid()
       const item = Object.values(state.cart).find(
@@ -42,8 +40,6 @@ export default function cart(state = intialState, action: CartActions) {
         },
       }
     case UPDATE_ITEM_IN_CART:
-      // eslint-disable-next-line no-debugger
-      debugger
       const oldItem = Object.values(state.cart).find(
         (i) => i.productId == action.item.productId,
       )
@@ -54,7 +50,7 @@ export default function cart(state = intialState, action: CartActions) {
             ...state.cart,
             [oldItem.id as string]: {
               ...oldItem,
-              quantity: oldItem.quantity + action.item.quantity,
+              quantity: action.item.quantity,
             },
           },
         }

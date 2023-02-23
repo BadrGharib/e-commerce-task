@@ -24,36 +24,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## What You're Getting
-```bash
-
-├──apis # app apis requesting implementations 
-│   ├── exchangeRate.ts # exchange rate api requesting implemention using (https://api.exchangerate.host/)
-|   ├── types.ts  # common types and interfaces related to apis
-│       
-├── components # app components
-│    ├── FormElements # Shared Form Elements as button ,input ,...
-│    │   ├── Button # button control
-│    │
-│    ├── UIElements # Shared UI Elements like DateRangePicker , Grid , Spinner ,...
-│    │   ├── DateRangePicker # button control
-│    │   ├── Grid # Spinner control
-│    │   ├── Spinner # Toggel Button control
-│    
-├── pages # app pages we have only one page ExchangeRate page (home) with route "/"
-│   ├── ExchangeRate # contain project assets like imgs
-│
-├── styles # This is the root of your app. Contains static HTML right now.
-│   ├── common.scss # contain css varibales like colors and fonts
-│   
-├──utils  
-│   ├── helpers.ts # contain helpers functions like get  named date range 
-│        
-│    .
-├── App.tsx # App component contain routing implementations using react-router-dom 
-├── Dependencies Graph.png # Dependencies Graph show all components dependencies
-```
-
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

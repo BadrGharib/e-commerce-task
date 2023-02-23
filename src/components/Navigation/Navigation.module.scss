@@ -12,12 +12,17 @@
   z-index: 2;
 }
 .cartItem {
-  width: 20px;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+.cartText {
+  font-size: 20px;
 }
 .cart {
   cursor: pointer;
-  width: 25px;
+  width: 16px;
+  margin-right: 5px;
 }
 .count {
   width: 20px;
@@ -32,4 +37,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
+}
+a {
+  text-decoration: none !important;
 }

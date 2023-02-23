@@ -18,6 +18,7 @@ const Navigation: React.FC = () => {
         <div className={style.cartItem}>
           {itemCount > 0 && <div className={style.count}>{itemCount}</div>}
           <FaShoppingCart className={style.cart} />
+          <div className={style.cartText}>Cart</div>
         </div>
       </Link>
     </div>

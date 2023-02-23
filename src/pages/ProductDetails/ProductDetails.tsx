@@ -5,6 +5,7 @@ import style from './ProductDetails.module.scss'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/reducers'
+import Header from '../../components/UIElements/Header/Header'
 
 const ProductDetails: React.FC = () => {
   const { id } = useParams()
@@ -15,14 +16,17 @@ const ProductDetails: React.FC = () => {
   const selectedProduct = products[id]
 
   return (
-    <div className={style.ProductDetails}>
-      <div className={style.imgsCarousel}>
-        <Carousel imgs={selectedProduct.imgs} />
+    <>
+      <Header title={selectedProduct.title} />
+      <div className={style.ProductDetails}>
+        <div className={style.imgsCarousel}>
+          <Carousel imgs={selectedProduct.imgs} />
+        </div>
+        <div className={style.productInfo}>
+          <ProductInfo product={selectedProduct} />
+        </div>
       </div>
-      <div className={style.productInfo}>
-        <ProductInfo product={selectedProduct} />
-      </div>
-    </div>
+    </>
   )
 }
 

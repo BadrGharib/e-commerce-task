@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { updateItemInCart } from '../../store/actions/cart'
+import { addItemToCart } from '../../store/actions/cart'
 import { Product } from '../../types'
 import Button from '../FormElements/Button/Button'
 import style from './ProductInfo.module.scss'
@@ -12,11 +12,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const quantityRef = useRef<HTMLInputElement>(null)
   const cartDispatcher = useDispatch()
   const handelAddToCart = () => {
-    // eslint-disable-next-line no-debugger
-    debugger
     quantityRef !== null &&
       cartDispatcher(
-        updateItemInCart({
+        addItemToCart({
           productId: product.id,
           quantity: parseInt(quantityRef.current?.value as string),
         }),

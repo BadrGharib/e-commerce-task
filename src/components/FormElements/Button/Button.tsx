@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import style from './Button.module.scss'
 
@@ -7,7 +9,6 @@ type ButtonProps = React.ComponentProps<'button'> & {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  // eslint-disable-next-line react/prop-types
   className,
   inverse,
   ...props

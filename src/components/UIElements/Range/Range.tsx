@@ -1,28 +1,23 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { Slider } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import style from './Range.module.scss'
 
-interface ProductCardProps {
+interface RangeProps {
   from: number
   to: number
   min: number
   max: number
   onChange: (from: number, to: number) => void
 }
-const Range: React.FC<ProductCardProps> = ({
-  from,
-  to,
-  min,
-  max,
-  onChange,
-}) => {
+const Range: React.FC<RangeProps> = ({ from, to, min, max, onChange }) => {
   const [value, setValue] = React.useState<number | number[]>([min, max])
   useEffect(() => {
     setValue([from, to])
   }, [from, to])
 
   const handelChanged = (
-    event: React.ChangeEvent<any>,
+    event: React.ChangeEvent<{}>,
     value: number | number[],
   ) => {
     setValue(value)
@@ -39,7 +34,6 @@ const Range: React.FC<ProductCardProps> = ({
         onChange={handelChanged}
         valueLabelDisplay="auto"
         aria-labelledby="range-slider"
-        // getAriaValueText={valuetext}
       />
     </div>
   )

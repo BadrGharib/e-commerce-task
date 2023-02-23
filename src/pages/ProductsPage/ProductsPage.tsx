@@ -5,6 +5,7 @@ import { RootState } from '../../store/reducers'
 import ProductList from '../../components/ProductList/ProductList'
 import Search from '../../components/UIElements/Search/Search'
 import Range from '../../components/UIElements/Range/Range'
+import Header from '../../components/UIElements/Header/Header'
 
 const ProductsPage: React.FC = () => {
   const products = useSelector((state: RootState) => state.products.products)
@@ -28,19 +29,36 @@ const ProductsPage: React.FC = () => {
           p.title.toLocaleLowerCase().includes(searchTxt),
         )
       : filterProducts
-  return (
-    <div className={style.productsPage}>
-      <ProductList products={filterProducts} />
-      <div className={style.filters}>
+
+  const filters = () => {
+    return (
+      <>
         <div className={style.search}>
           <Search
             onChange={onSearchChanged}
             placeholder="Search For A Product"
+            value={searchTxt}
           />
         </div>
-        <Range from={80} to={250} min={0} max={300} onChange={onRangeChanged} />
+        <Range
+          from={priceRange.from}
+          to={priceRange.to}
+          min={0}
+          max={300}
+          onChange={onRangeChanged}
+        />
+      </>
+    )
+  }
+  return (
+    <>
+      <Header title="SURFING" />
+      <div className={style.productsPage}>
+        <div className={style.filtersMobile}>{filters()}</div>
+        <ProductList products={filterProducts} />
+        <div className={style.filters}>{filters()}</div>
       </div>
-    </div>
+    </>
   )
 }
 
