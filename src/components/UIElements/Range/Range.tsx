@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
-import { Slider } from '@material-ui/core'
+import Slider from '@mui/material/Slider'
 import React, { useEffect } from 'react'
 import style from './Range.module.scss'
 
@@ -16,10 +16,7 @@ const Range: React.FC<RangeProps> = ({ from, to, min, max, onChange }) => {
     setValue([from, to])
   }, [from, to])
 
-  const handelChanged = (
-    event: React.ChangeEvent<{}>,
-    value: number | number[],
-  ) => {
+  const handelChanged = (event: Event, value: number | number[]) => {
     setValue(value)
     Array.isArray(value) && onChange(value[0], value[1])
   }
